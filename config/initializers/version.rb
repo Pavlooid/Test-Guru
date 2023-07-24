@@ -1,7 +1,5 @@
 module Version
-  version = '0.1.1'
-
   def self.get_version
-  version
+    version = '0.1.2'
   end
 end
