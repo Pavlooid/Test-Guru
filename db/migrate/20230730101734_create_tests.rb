@@ -3,7 +3,7 @@ class CreateTests < ActiveRecord::Migration[6.0]
     create_table :tests do |t|
       t.string :title, null: false
       t.integer :level, default: 0, null: false
-      t.integer :category_id, foreign_key: true, null: false
+      t.references :category, foreign_key: true, null: false
 
       t.timestamps
     end
