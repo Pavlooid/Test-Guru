@@ -42,3 +42,9 @@ answer1_t, answer1_f, answer2_t, answer2_f, answer3_t, answer3_f, answer4_t, ans
 { body: '1, 2, 3', correct: false, question_id: resident_evil_plot.id },
 { body: '3', correct: true, question_id: ruby_usage.id },
 { body: '1, 2, 4', correct: false, question_id: ruby_usage.id }])
+
+p_1, p_2, p_3, p_4 = PassedTest.create!([
+{ user_id: pavel.id, test_id: sql.id, passed: 'passed'},
+{ user_id: teachbase.id, test_id: mass_effect.id, passed: 'passed'},
+{ user_id: teachbase.id, test_id: harry_potter.id, passed: 'in progress'},
+{ user_id: thinknetica.id, test_id: ruby.id, passed: 'passed'}])
