@@ -18,14 +18,14 @@ pavel, teachbase, thinknetica = User.create!([
 { first_name: 'think', last_name: 'netica', email: 'learn@thinknetica.com', username: 'Thinknetica' }])
 
 star_wars, harry_potter, ruby_for_romantics, war_and_piece, mass_effect, resident_evil, ruby, sql = Test.create!([
-{ title: 'Star Wars', level: 3, category_id: movies.id },
-{ title: 'Harry Potter', level: 1, category_id: movies.id },
-{ title: 'Ruby for Romantics', level: 3, category_id: books.id },
-{ title: 'War and Piece', level: 4, category_id: books.id },
-{ title: 'Mass Effect', level: 1, category_id: games.id },
-{ title: 'Resident Evil', level: 2, category_id: games.id },
-{ title: 'Ruby', level: 3, category_id: languages.id },
-{ title: 'SQL', level: 0, category_id: languages.id }])
+{ title: 'Star Wars', level: 3, category_id: movies.id, user_id: pavel.id },
+{ title: 'Harry Potter', level: 1, category_id: movies.id, user_id: teachbase,id },
+{ title: 'Ruby for Romantics', level: 3, category_id: books.id, user_id: teachbase.id },
+{ title: 'War and Piece', level: 4, category_id: books.id, user_id: thinknetica.id },
+{ title: 'Mass Effect', level: 1, category_id: games.id, user_id: pavel.id },
+{ title: 'Resident Evil', level: 2, category_id: games.id, user_id: pavel.id },
+{ title: 'Ruby', level: 3, category_id: languages.id, user_id: pavel.id },
+{ title: 'SQL', level: 0, category_id: languages.id, user_id: teachbase.id }])
 
 star_wars_chapters, war_and_piece_story, resident_evil_plot, ruby_usage = Question.create!([
 { title: 'Star Wars chapters', question: 'How many chapters exist?', test_id: star_wars.id },
