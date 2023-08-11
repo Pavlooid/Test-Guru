@@ -43,8 +43,10 @@ answer1_t, answer1_f, answer2_t, answer2_f, answer3_t, answer3_f, answer4_t, ans
 { body: '3', correct: true, question: ruby_usage },
 { body: '1, 2, 4', correct: false, question: ruby_usage }])
 
+=begin
 p_1, p_2, p_3, p_4 = PassedTest.create!([
 { user: pavel, test: sql, passed: 'passed'},
 { user: teachbase, test: mass_effect, passed: 'passed'},
 { user: teachbase, test: harry_potter, passed: 'in progress'},
 { user: thinknetica, test: ruby, passed: 'passed'}])
+=end
