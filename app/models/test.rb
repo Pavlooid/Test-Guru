@@ -2,7 +2,7 @@
 
 class Test < ApplicationRecord
   belongs_to :category
-  belongs_to :user
+  belongs_to :author, class_name: 'User'
 
   has_many :questions, dependent: :destroy
   has_many :passed_tests, dependent: :destroy
