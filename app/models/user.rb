@@ -1,6 +1,15 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
-	def test_by_level(level) 
-		Test.joins('INNER JOIN passed_tests ON passed_tests.test_id = tests.id')
-			.where(level: level, passed_tests: { user_id: id }) 
-	end
+  has_many :passed_tests, dependent: :destroy
+  has_many :tests, through: :passed_tests
+  has_many :created_tests,
+           class_name: 'Test',
+           foreign_key: 'author_id',
+           dependent: :destroy,
+           inverse_of: :author
+
+  def test_by_level(level)
+    tests.where(level: level)
+  end
 end
