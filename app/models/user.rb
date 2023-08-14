@@ -9,6 +9,8 @@ class User < ApplicationRecord
            dependent: :destroy,
            inverse_of: :author
 
+  validates :first_name, :last_name, :email, :username, presence: true
+
   def test_by_level(level)
     tests.where(level: level)
   end
