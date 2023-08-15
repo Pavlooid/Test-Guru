@@ -24,7 +24,7 @@ star_wars, harry_potter, ruby_for_romantics, war_and_piece, mass_effect, residen
 { title: 'War and Piece', level: 4, category: books, author: thinknetica },
 { title: 'Mass Effect', level: 1, category: games, author: pavel },
 { title: 'Resident Evil', level: 2, category: games, author: pavel },
-{ title: 'Ruby', level: 3, category: languages, author: pavel },
+{ title: 'Ruby', level: 7, category: languages, author: pavel },
 { title: 'SQL', level: 0, category: languages, author: teachbase }])
 
 star_wars_chapters, war_and_piece_story, resident_evil_plot, ruby_usage = Question.create!([
