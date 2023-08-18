@@ -1,20 +1,31 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index]
-  bedore_action :find_question, only: %i[destroy]
+  before_action :find_test, only: %i[create index new update]
+  before_action :find_question, only: %i[destroy]
 
   def index
     @questions = @test.questions
   end
 
-  def start; end
+  def show
+    @question = Question.find(params[:id])
+  end
 
-  def create; end
+  def create
+    @question = @test.questions.create(question_params)
+    render plain: @question.inspect
+  end
+
+  def start; end
 
   def new; end
 
-  def destroy; end
+  def update; end
+
+  def destroy
+    @question.destroy
+  end
 
   private
 
@@ -24,5 +35,9 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+  end
+
+  def question_params
+    params.require(:question).permit(:title, :question)
   end
 end
