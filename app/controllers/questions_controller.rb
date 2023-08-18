@@ -4,6 +4,8 @@ class QuestionsController < ApplicationController
   before_action :find_test, only: %i[create index new update]
   before_action :find_question, only: %i[destroy]
 
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
+
   def index
     @questions = @test.questions
   end
@@ -16,12 +18,6 @@ class QuestionsController < ApplicationController
     @question = @test.questions.create(question_params)
     render plain: @question.inspect
   end
-
-  def start; end
-
-  def new; end
-
-  def update; end
 
   def destroy
     @question.destroy
@@ -39,5 +35,9 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:title, :question)
+  end
+
+  def rescue_with_question_not_found
+    render plain: "Вопрос с id=#{params[:id]} не найден!"
   end
 end
