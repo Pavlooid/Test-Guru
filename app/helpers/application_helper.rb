@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
-  def time
+  def current_year
     Time.current.year
   end
 
@@ -9,4 +11,3 @@ module ApplicationHelper
             target: '_blank'
   end
 end
-

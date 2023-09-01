@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TestsController < ApplicationController
   before_action :find_test, only: %i[destroy edit show update]
 
@@ -17,7 +19,7 @@ class TestsController < ApplicationController
 
   def edit; end
 
-  def index 
+  def index
     @tests = Test.all
   end
 
@@ -35,7 +37,7 @@ class TestsController < ApplicationController
     end
   end
 
-private
+  private
 
   def find_test
     @test = Test.find(params[:id])
