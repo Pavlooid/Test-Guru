@@ -1,0 +1,39 @@
+<h1>Тема теста - "<%= @test.title %>"</h1>
+
+<p>
+  <%= link_to 'Добавить вопрос к этому тесту', new_test_question_path(@test) %> |
+  <%= link_to 'Редактировать этот тест', edit_test_path(@test) %> |
+  <%= link_to 'Все тесты', tests_path %>
+</p>
+
+<p><strong>Категория - </strong><%= @test.category.title %></p> 
+<p><strong>Сложность - </strong><%= @test.level %></p>
+<p><strong>Автор - </strong><%= @test.author.username %></p>
+
+<p><strong>Вопросы теста:</strong></p>
+<% if @test.questions.empty? %>
+  <p>У данного теста нет привязанных вопросов</p>
+<% else %>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Тема</th>
+    <th>Вопрос</th>
+    <th colspan="3">Действия</th>
+  </tr>
+  <% @test.questions.each do |question| %>
+    <tr>
+      <td><%= question.id %></td>
+      <td><%= question.title %></td>
+      <td><%= question.question %></td>
+      <td><%= link_to 'К вопросу', question_path(question) %></td>
+      <td><%= link_to 'Изменить', edit_question_path(question) %></td>
+      <td>
+        <%= link_to 'Удалить',
+                    question_path(question),
+                    method: :delete,
+                    data:   { confirm: 'Вы уверены?' } %>
+    </tr>
+  <% end %>
+</table>
+<% end %>

@@ -1,13 +1,7 @@
-<h1>Создать вопрос для теста '<%= @test.title %>'</h1>
+<%= question_header(action_name, @test.title) %>
 
-<form action="<%= "/tests/#{@test.id}/questions" %>" method="post">
-  <input name="authenticity_token" value ="<%= form_authenticity_token %>" type ="hidden">
-  <p>
-    <label for="question-title">Title</label>
-    <input type="text" name="question[title]" id="question-title">
-  </p><br>
-    <label for="question-question">Question</label>
-    <input type="text" name="question[question]" id="question-question">
-  </p><br>
-  <input type="submit" value ="Create">
-</form>
+<p>
+  <%= link_to 'Обратно', test_path(@test) %>
+</p>
+
+<%= render 'form' %>
