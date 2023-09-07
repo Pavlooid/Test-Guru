@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[destroy edit show update]
+  before_action :find_test, only: %i[destroy edit show start update]
+  before_action :find_user, only: :start
 
   def create
     @test = Test.new(test_params)
@@ -37,10 +38,19 @@ class TestsController < ApplicationController
     end
   end
 
+  def start
+    @user.tests.push(@test)
+    redirect_to @user.test_passage(@test)
+  end
+
   private
 
   def find_test
     @test = Test.find(params[:id])
+  end
+
+  def find_user
+    @user = User.first
   end
 
   def test_params

@@ -13,7 +13,7 @@ class AnswersController < ApplicationController
   def edit; end
 
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
     if @answer.save
       redirect_to @answer
     else
@@ -47,5 +47,4 @@ class AnswersController < ApplicationController
   def answer_params
     params.require(:answer).permit(:body, :correct)
   end
-
 end
