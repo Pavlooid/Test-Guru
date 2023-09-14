@@ -7,3 +7,11 @@
 
 <p><strong>Тема - </strong><%= @question.title %></p> 
 <p><strong>Вопрос - </strong><%= @question.question %></p>
+
+<h2>Ответы</h2>
+
+<%= link_to 'Новый ответ', new_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
