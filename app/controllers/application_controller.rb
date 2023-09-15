@@ -1,17 +1,13 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-
   helper_method :current_user, :logged_in?
 
   private
 
   def authenticate_user!
-    unless current_user
-      redirect_to login_path, alert: 'Логин и/или пароль неверен!'
-    end
-
-    cookies[:email] = current_user&.email
+    redirect_to login_path, alert: 'Для продолжения требуется войти в систему!' unless current_user
+    cookies[:return] = request.path
   end
 
   def current_user
