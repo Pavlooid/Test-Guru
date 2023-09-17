@@ -6,8 +6,9 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
-    redirect_to login_path, alert: 'Для продолжения требуется войти в систему!' unless current_user
-    cookies[:return] = request.path
+    return if current_user
+    cookies[:redirect_to_request_path] = request.path
+    redirect_to login_path, alert: 'Для продолжения требуется войти в систему!'
   end
 
   def current_user

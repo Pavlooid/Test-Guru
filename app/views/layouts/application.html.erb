@@ -12,7 +12,8 @@
   <body>
     <% if logged_in? %>
       <p class="nav user">Добро пожаловать, <%= current_user.username %>
-      <%= link_to 'ГУРУ', about_path %> | <%= link_to 'Выйти из системы', logout_path %></p>
+      <%= link_to 'ГУРУ', about_path %> | <%= link_to 'Выйти из системы', logout_path,
+      method: :delete %></p>
     <% end %>
     <%= yield %>
   </body>
