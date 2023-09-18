@@ -5,7 +5,7 @@ class TestsController < ApplicationController
   before_action :find_test, only: %i[destroy edit show start update]
 
   def create
-    @test = current_user.created_tests.create!(test_params)
+    @test = current_user.created_tests.create(test_params)
     if @test.save
       redirect_to @test
     else
@@ -50,6 +50,6 @@ class TestsController < ApplicationController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 end
