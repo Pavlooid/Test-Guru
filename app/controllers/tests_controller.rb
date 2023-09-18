@@ -5,7 +5,7 @@ class TestsController < ApplicationController
   before_action :find_test, only: %i[destroy edit show start update]
 
   def create
-    @test = Test.new(test_params)
+    @test = current_user.created_tests.create!(test_params)
     if @test.save
       redirect_to @test
     else
