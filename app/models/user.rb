@@ -1,8 +1,14 @@
 # frozen_string_literal: true
 
-require 'digest/sha1'
-
 class User < ApplicationRecord
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable, 
+         :validatable,
+         :confirmable
+
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :created_tests,
@@ -11,12 +17,13 @@ class User < ApplicationRecord
            dependent: :destroy,
            inverse_of: :author
 
-  has_secure_password
-
-  validates :first_name, :last_name, :email, :username, presence: true
-  validates :email, uniqueness: true,
-                    format: { with: URI::MailTo::EMAIL_REGEXP,
-                              message: 'Некорректный формат почты' }
+  validates :email, presence: true, uniqueness: true,
+            format: { 
+              with: URI::MailTo::EMAIL_REGEXP,
+              message: 'Некорректный формат почты'
+            }
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
