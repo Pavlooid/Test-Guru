@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::TestsController < Admin::BaseController
-  before_action :find_test, only: %i[destroy edit show start update]
+  before_action :find_test, only: %i[destroy edit show update]
 
   def create
     @test = current_user.created_tests.build(test_params)
@@ -35,11 +35,6 @@ class Admin::TestsController < Admin::BaseController
     else
       render :edit
     end
-  end
-
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
   end
 
   private
