@@ -13,7 +13,7 @@ movies, books, games, languages = Category.create!([
 { title: 'Languages' }])
 
 pavel, teachbase, thinknetica = User.create!([
-{ first_name: 'Pavel', last_name: 'Mirov', email: 'pavlooo987@gmail.com', username: 'Pavlooid', password: '123456' },
+{ first_name: 'Pavel', last_name: 'Mirov', email: 'pavlooo987@gmail.com', username: 'Pavlooid', password: '123456', type: 'Admin' },
 { first_name: 'teach', last_name: 'base', email: 'info@teachbase.ru', username: 'Teachbase', password: '123456' },
 { first_name: 'think', last_name: 'netica', email: 'learn@thinknetica.com', username: 'Thinknetica', password: '123456' }])
 
