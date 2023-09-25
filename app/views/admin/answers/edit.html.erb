@@ -1,0 +1,8 @@
+<h1>Изменить ответ</h1>
+
+<p>
+  <%= @answer.question.question %>
+</p>
+
+<%= render 'form' %>
+<%= link_to 'Обратно', admin_question_path(@answer.question) %>

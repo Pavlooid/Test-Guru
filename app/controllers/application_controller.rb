@@ -1,21 +1,15 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?
+  before_action :configure_sign_up_params, if: :devise_controller?
 
-  private
-
-  def authenticate_user!
-    return if current_user
-    cookies[:redirect_to_request_path] = request.path
-    redirect_to login_path, alert: 'Для продолжения требуется войти в систему!'
+  def after_sign_in_path_for(_resource)
+    current_user.is_a?(Admin) ? admin_tests_path : root_path
   end
 
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
-  end
+  protected
 
-  def logged_in?
-    current_user.present?
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
   end
 end

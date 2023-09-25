@@ -13,9 +13,9 @@ movies, books, games, languages = Category.create!([
 { title: 'Languages' }])
 
 pavel, teachbase, thinknetica = User.create!([
-{ first_name: 'Pavel', last_name: 'Mirov', email: 'pavlooo987@gmail.com', username: 'Pavlooid' },
-{ first_name: 'teach', last_name: 'base', email: 'info@teachbase.ru', username: 'Teachbase' },
-{ first_name: 'think', last_name: 'netica', email: 'learn@thinknetica.com', username: 'Thinknetica' }])
+{ first_name: 'Pavel', last_name: 'Mirov', email: 'pavlooo987@gmail.com', username: 'Pavlooid', password: '123456', type: 'Admin' },
+{ first_name: 'teach', last_name: 'base', email: 'info@teachbase.ru', username: 'Teachbase', password: '123456' },
+{ first_name: 'think', last_name: 'netica', email: 'learn@thinknetica.com', username: 'Thinknetica', password: '123456' }])
 
 star_wars, harry_potter, ruby_for_romantics, war_and_piece, mass_effect, resident_evil, ruby, sql = Test.create!([
 { title: 'Star Wars', level: 3, category: movies, author: pavel },
