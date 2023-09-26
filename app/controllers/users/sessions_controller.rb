@@ -6,6 +6,6 @@ class Users::SessionsController < Devise::SessionsController
   protected
 
   def welcome_flash_after_sign_in
-    flash[:notice] =  "Привет, #{current_user.first_name}!" unless current_user.is_a?(Admin)
+    flash[:notice] = t('general.welcome', first_name: current_user.first_name) unless current_user.is_a?(Admin)
   end
 end

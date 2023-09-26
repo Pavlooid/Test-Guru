@@ -1,6 +1,133 @@
 ru:
-  hello: "Привет мир"
+  hello: "Привет мир!"
+
+  helpers:
+    select:
+      prompt: "Выберите вариант"
+
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
 
   tests:
     index:
-      header: "Доступные тесты"
+      header: "Доступные тесты:"
+      id: "ID теста"
+      title: "Название"
+      level: "Уровень"
+      question_count: "Кол-во вопросов"
+      start: "Начать Прохождение"
+    test:
+      start: "Начать прохождение теста"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершён!"
+      all_questions: "Всего вопросов: %{all_questions_count}"
+      true_questions: "Правильных ответов: %{correct_questions}"
+      success: "Успех, результат:"
+      fail: "Провал, результат:"
+    show:
+      header: "Прохождение теста %{title}"
+      all_questions: "Кол-во вопросов: %{all_questions_count}"
+      current_question_number: "Номер текущего вопроса: %{current_question_number}"
+      current_question: "Текущий вопрос: %{current_question_question}"
+      variants: "Варианты ответов:"
+
+  admin:
+    tests:
+      create:
+        success: "Тест создан успешно!"
+      update:
+        success: "Тест обновлён успешно!"
+      index:
+        header: "Доступные тесты:"
+        new_test: "Создать новый тест"
+      edit:
+        header: "Изменить тест %{title}"
+      new:
+        header: "Создать новый тест"
+      show:
+        header: "Тема теста - %{title}"
+        add_question: "Добавить вопрос к тесту"
+        edit: "Редактировать тест"
+        category: "Категория - "
+        level: "Сложность - "
+        author: "Автор - "
+        questions: "Вопросы теста:"
+        no_questions: "У данного теста нет привязанных вопросов!"
+        id: "Номер"
+        title: "Тема"
+        question: "Вопрос"
+        actions: "Действия"
+
+    questions:
+      show:
+        header: "Question from test %{title}"
+        title: "Тема - "
+        question: "Вопрос - "
+        answers: "Ответы"
+        edit_question: "Изменить вопрос"
+        test_questions: "Вернуться к вопросам теста"
+        new_answer: "Создать новый ответ"
+      form:
+        new_question: "Создать новый вопрос по теме %{title}"
+        edit_question: "Изменить вопрос по теме %{title}"
+        title: "Тема"
+        question: "Вопрос"
+        show_answer: "Показать ответ"
+
+    answers:
+      new:
+        header: "Новый ответ"
+      edit:
+        header: "Изменить ответ - %{answer}"
+      show:
+        header: "Вопрос - %{answer}"
+        answer: "Ответ: "
+        correct: "Правильно? - "
+      form:
+        body: "Тело вопроса"
+        correct: "Правильность"
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест!'
+
+  general:
+    back: "Обратно"
+    tests: "К тестам"
+    test: "К тесту"
+    question: "К вопросу"
+    next_question: "Следующий вопрос"
+    change: "Изменить"
+    delete: "Удалить"
+    show: "Показать"
+    confirm: "Вы уверены?"
+    welcome: "Привет, %{first_name}!"
+    admin_bar: "Панель администратора"
+    welcome_admin: "Добро пожаловать"
+    welcome_user: "Добро пожаловать, %{user}"
+    guru: "Гуру"
+    exit: "Выйти"

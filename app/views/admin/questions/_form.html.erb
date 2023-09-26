@@ -2,12 +2,12 @@
 <%= render 'shared/errors', resource: @question %>
 
   <p>
-    <%= form.label :title %><br>
+    <%= form.label :title, t('.title') %><br>
     <%= form.text_field :title %>
   </p><br>
 
   <p>
-    <%= form.label :question %><br>
+    <%= form.label :question, t('.question') %><br>
     <%= form.text_field :question%>
   </p><br>
 
