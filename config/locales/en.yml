@@ -176,3 +176,6 @@ en:
     welcome_user: "Welcome, %{user}"
     guru: "Guru"
     exit: "Exit"
+    log_in: "Log in"
+    sign_up: "Sign up"
+    enter: "Enter"
