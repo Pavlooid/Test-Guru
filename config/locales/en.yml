@@ -122,9 +122,10 @@ en:
         edit_question: "Edit question %{title}"
         title: "Title"
         question: "Question"
-        show_answer: "Show answer"
 
     answers:
+      answer:
+        show_answer: "Show answer"
       new:
         header: "New answer"
       edit:
@@ -141,6 +142,23 @@ en:
     completed_test:
       subject: "You've completed test!"
 
+  devise:
+    registrations:
+      new:
+        header: "Become a Guru"
+        first_name: "Frist name"
+        last_name: "Last name"
+        email: "Email"
+        password: "Password"
+        password_confirm: "Password confirmation"
+        registrate: "Register"
+    sessions:
+      new:
+        header: "Enter Guru gates"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+
   general:
     back: "Back"
     tests: "To tests"
@@ -150,6 +168,7 @@ en:
     change: "Change"
     delete: "Delete"
     show: "Show"
+    edit: "Edit"
     confirm: "Are you sure?"
     welcome: "Welcome, %{first_name}!"
     admin_bar: "Admin panel"

@@ -84,7 +84,7 @@ ru:
 
     questions:
       show:
-        header: "Question from test %{title}"
+        header: "Вопрос из теста %{title}"
         title: "Тема - "
         question: "Вопрос - "
         answers: "Ответы"
@@ -96,9 +96,10 @@ ru:
         edit_question: "Изменить вопрос по теме %{title}"
         title: "Тема"
         question: "Вопрос"
-        show_answer: "Показать ответ"
 
     answers:
+      answer:
+        show_answer: "Показать ответ"
       new:
         header: "Новый ответ"
       edit:
@@ -115,6 +116,23 @@ ru:
     completed_test:
       subject: 'Вы успешно завершили тест!'
 
+  devise:
+    registrations:
+      new:
+        header: "Стань гуру"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirm: "Подтверждение пароля"
+        registrate: "Зарегестрироваться"
+    sessions:
+      new:
+        header: "Войди во врата Гуру"
+        email: "Электронная почта"
+        password: "Пароль"
+        remember_me: "Запомнить"
+
   general:
     back: "Обратно"
     tests: "К тестам"
@@ -124,6 +142,7 @@ ru:
     change: "Изменить"
     delete: "Удалить"
     show: "Показать"
+    edit: "Изменить"
     confirm: "Вы уверены?"
     welcome: "Привет, %{first_name}!"
     admin_bar: "Панель администратора"
