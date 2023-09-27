@@ -30,4 +30,149 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello world!"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header: 
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Available tests:"
+      id: "Test ID"
+      title: "Title"
+      level: "Level"
+      question_count: "Question count"
+      start: "Start passing"
+    test:
+      start: "Start passing test"
+
+  test_passages:
+    result:
+      header: "Test %{title} was completed!"
+      all_questions: "Questions count: %{all_questions_count}"
+      true_questions: "True answers: %{correct_questions}"
+      success: "Success, result: "
+      fail: "Fail, result: "
+    show:
+      header: "Passing %{title} test"
+      all_questions: "Questions count: %{all_questions_count}"
+      current_question_number: "Current question number: %{current_question_number}"
+      current_question: "Current question: %{current_question_question}"
+      variants: "Variants of answers:"
+
+  admin:
+    tests:
+      create:
+        success: "Test was succesfully created!"
+      update:
+        success: "Test was succesfully updated!"
+      index:
+        header: "Available tests:"
+        new_test: "Create new test"
+      edit:
+        header: "Edit test %{title}"
+      new:
+        header: "Create new test"
+      show:
+        header: "Test title - %{title}"
+        add_question: "Add question to test"
+        edit: "Edit test"
+        category: "Category - "
+        level: "Level - "
+        author: "Author - "
+        questions: "Test questions:"
+        no_questions: "Test doesn't have questions!"
+        id: "ID"
+        title: "Title"
+        question: "Question"
+        actions: "Actions"
+
+    questions:
+      show:
+        header: "Question from test %{title}"
+        title: "Title - "
+        question: "Question - "
+        answers: "Answers"
+        edit_question: "Edit question"
+        test_questions: "Back to test questions"
+        new_answer: "Create new asnwer"
+      form:
+        new_question: "New question to %{title}"
+        edit_question: "Edit question %{title}"
+        title: "Title"
+        question: "Question"
+
+    answers:
+      answer:
+        show_answer: "Show answer"
+      new:
+        header: "New answer"
+      edit:
+        header: "Edit answer - %{answer}"
+      show:
+        header: "Question - %{answer}"
+        answer: "Answer: "
+        correct: "Corrected? - "
+      form:
+        body: "Body"
+        correct: "Correct?"
+
+  tests_mailer:
+    completed_test:
+      subject: "You've completed test!"
+
+  devise:
+    registrations:
+      new:
+        header: "Become a Guru"
+        first_name: "Frist name"
+        last_name: "Last name"
+        email: "Email"
+        password: "Password"
+        password_confirm: "Password confirmation"
+        registrate: "Register"
+    sessions:
+      new:
+        header: "Enter Guru gates"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+
+  general:
+    back: "Back"
+    tests: "To tests"
+    test: "To test"
+    question: "To question"
+    next_question: "Next question"
+    change: "Change"
+    delete: "Delete"
+    show: "Show"
+    edit: "Edit"
+    confirm: "Are you sure?"
+    welcome: "Welcome, %{first_name}!"
+    admin_bar: "Admin panel"
+    welcome_admin: "Welcome"
+    welcome_user: "Welcome, %{user}"
+    guru: "Guru"
+    exit: "Exit"

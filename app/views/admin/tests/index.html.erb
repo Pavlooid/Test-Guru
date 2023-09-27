@@ -1,15 +1,15 @@
-<h1>Все тесты:</h1>
+<h1><%= t('.header') %></h1>
 
 <p>
-<%= link_to 'Создать новый тест', new_admin_test_path %>
+<%= link_to t('.new_test'), new_admin_test_path %>
 </p>
 
 <table>
   <tr>
-    <th>ID теста</th>
-    <th>Тема</th>
-    <th>Сложность</th>
-    <th>Кол-во вопросов</th>
+    <th><%= t('tests.index.id') %></th>
+    <th><%= t('tests.index.title') %></th>
+    <th><%= t('tests.index.level') %></th>
+    <th><%= t('tests.index.question_count') %></th>
     <th colspan="4">Действия</th>
   </tr>
 

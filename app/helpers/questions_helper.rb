@@ -3,9 +3,9 @@
 module QuestionsHelper
   def question_header(question)
     header = if question.new_record?
-               "Создать новый вопрос по теме #{@test.title} "
+               t('admin.questions.form.new_question', title: @test.title)
              else
-               "Изменить вопрос по теме #{question.test.title}"
+               t('admin.questions.form.edit_question', title: question.test.title)
              end
 
     content_tag(:h1, header)

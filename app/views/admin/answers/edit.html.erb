@@ -1,8 +1,4 @@
-<h1>Изменить ответ</h1>
-
-<p>
-  <%= @answer.question.question %>
-</p>
+<h1><%= t('.header', answer: @answer.question.question) %></h1>
 
 <%= render 'form' %>
-<%= link_to 'Обратно', admin_question_path(@answer.question) %>
+<%= link_to t('general.back'), admin_question_path(@answer.question) %>
