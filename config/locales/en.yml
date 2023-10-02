@@ -109,6 +109,12 @@ en:
         actions: "Actions"
 
     questions:
+      create:
+        success: "Question created succesfully!"
+      update:
+        success: "Question updated succesfully!"
+      destroy:
+        success: "Question deleted succesfully!"
       show:
         header: "Question from test %{title}"
         title: "Title - "
@@ -124,6 +130,12 @@ en:
         question: "Question"
 
     answers:
+      create:
+        success: "Answer created succesfully!"
+      update:
+        success: "Answer updated succesfully!"
+      destroy:
+        success: "Answer deleted succesfully!"
       answer:
         show_answer: "Show answer"
       new:
@@ -176,3 +188,6 @@ en:
     welcome_user: "Welcome, %{user}"
     guru: "Guru"
     exit: "Exit"
+    log_in: "Log in"
+    sign_up: "Sign up"
+    enter: "Enter"

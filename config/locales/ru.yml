@@ -83,6 +83,12 @@ ru:
         actions: "Действия"
 
     questions:
+      create:
+        success: "Вопрос создан успешно!"
+      update:
+        success: "Вопрос обновлён успешно!"
+      destroy:
+        success: "Вопрос удалён успешно!"
       show:
         header: "Вопрос из теста %{title}"
         title: "Тема - "
@@ -98,6 +104,12 @@ ru:
         question: "Вопрос"
 
     answers:
+      create:
+        success: "Ответ создан успешно!"
+      update:
+        success: "Ответ обновлён успешно!"
+      destroy:
+        success: "Ответ удалён успешно!"
       answer:
         show_answer: "Показать ответ"
       new:
@@ -150,3 +162,6 @@ ru:
     welcome_user: "Добро пожаловать, %{user}"
     guru: "Гуру"
     exit: "Выйти"
+    log_in: "Войти в систему"
+    sign_up: "Зарегестрироваться"
+    enter: "Ввести"
