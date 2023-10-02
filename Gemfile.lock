@@ -60,6 +60,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     autoprefixer-rails (10.4.15.0)
       execjs (~> 2)
+    base64 (0.1.1)
     bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -90,6 +91,11 @@ GEM
       warden (~> 1.2.3)
     erubi (1.12.0)
     execjs (2.9.1)
+    faraday (2.7.11)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     ffi (1.16.1)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -186,6 +192,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -254,6 +261,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise (~> 4.0)
+  faraday
   jbuilder (~> 2.7)
   jquery-rails
   letter_opener

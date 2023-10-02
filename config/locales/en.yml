@@ -80,6 +80,9 @@ en:
       current_question_number: "Current question number: %{current_question_number}"
       current_question: "Current question: %{current_question_question}"
       variants: "Variants of answers:"
+    gist:
+      success: "Gist saved succesfully!"
+      failure: "During saving happened mistake!"
 
   admin:
     tests:

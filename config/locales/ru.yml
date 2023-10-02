@@ -54,6 +54,9 @@ ru:
       current_question_number: "Номер текущего вопроса: %{current_question_number}"
       current_question: "Текущий вопрос: %{current_question_question}"
       variants: "Варианты ответов:"
+    gist:
+      success: "Гист сохранён успешно!"
+      failure: "В течении сохранения произошла ошибка!"
 
   admin:
     tests:
