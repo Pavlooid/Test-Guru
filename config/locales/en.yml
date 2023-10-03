@@ -83,6 +83,7 @@ en:
     gist:
       success: "Gist saved succesfully!"
       failure: "During saving happened mistake!"
+      link: "Link to gist."
 
   admin:
     tests:
