@@ -1,7 +1,7 @@
 class GistQuestionService
 
   ROOT_ENDPOINT = 'https://api.github.com'
-  ACCESS_TOKEN = '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'
+  ACCESS_TOKEN = ENV['ACCESS_TOKEN']
 
   def initialize(question, client: setup_client)
     @question = question

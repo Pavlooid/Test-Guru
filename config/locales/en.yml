@@ -81,9 +81,9 @@ en:
       current_question: "Current question: %{current_question_question}"
       variants: "Variants of answers:"
     gist:
-      success: "Gist saved succesfully!"
+      success: "Gist saved succesfully! Link - %{link}"
       failure: "During saving happened mistake!"
-      link: "Link to gist."
+      link: "gist."
 
   admin:
     tests:
@@ -111,6 +111,15 @@ en:
         title: "Title"
         question: "Question"
         actions: "Actions"
+
+    gists:
+      index:
+        header: "All created gists:"
+        question: "Question"
+        url: "Gist url"
+        email_of_author: "Author email"
+      gist:
+        gist: "Gist"
 
     questions:
       create:
@@ -188,6 +197,7 @@ en:
     confirm: "Are you sure?"
     welcome: "Welcome, %{first_name}!"
     admin_bar: "Admin panel"
+    gist_bar: "Gists"
     welcome_admin: "Welcome"
     welcome_user: "Welcome, %{user}"
     guru: "Guru"

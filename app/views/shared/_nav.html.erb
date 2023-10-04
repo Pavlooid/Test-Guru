@@ -5,7 +5,8 @@
     <% if user_signed_in? %>
       <%= t('general.welcome_user', user: current_user.email) %> |
       <% if current_user.is_a?(Admin) %>
-      <%= link_to t('general.admin_bar'), admin_tests_path %> |
+      <%= link_to t('general.tests'), admin_tests_path %> |
+      <%= link_to t('general.gist_bar'), admin_gists_path %> |
       <% end %>
       <%= link_to t('general.exit'), destroy_user_session_path, method: :delete %>
       <% else %>

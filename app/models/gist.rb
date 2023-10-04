@@ -1,3 +1,3 @@
 class Gist < ApplicationRecord
-  # додедать вместе с 5 заданием
+  belongs_to :question
 end
