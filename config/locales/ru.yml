@@ -41,6 +41,12 @@ ru:
     test:
       start: "Начать прохождение теста"
 
+  gists:
+    create: 
+      success: "Гист сохранён успешно! Ссылка - %{link}"
+      failure: "В течении сохранения произошла ошибка!"
+      link: "гист."
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершён!"
@@ -54,10 +60,7 @@ ru:
       current_question_number: "Номер текущего вопроса: %{current_question_number}"
       current_question: "Текущий вопрос: %{current_question_question}"
       variants: "Варианты ответов:"
-    gist:
-      success: "Гист сохранён успешно! Ссылка - %{link}"
-      failure: "В течении сохранения произошла ошибка!"
-      link: "гист."
+      gist: "Гист"
 
   admin:
     tests:

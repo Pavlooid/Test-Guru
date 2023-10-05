@@ -1,7 +1,6 @@
 class GistQuestionService
 
-  ROOT_ENDPOINT = 'https://api.github.com'
-  ACCESS_TOKEN = ENV['ACCESS_TOKEN']
+  GUTHUB_ACCESS_TOKEN = ENV['GUTHUB_ACCESS_TOKEN']
 
   def initialize(question, client: setup_client)
     @question = question
@@ -33,14 +32,12 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.question]
-    content += @question.answers.pluck(:body) 
-    content.join("\n")
+    [@question.question, *@question.answers.pluck(:body)].join("\n")
   end
 
   private
 
   def setup_client
-    Octokit::Client.new(access_token: ACCESS_TOKEN, api_endpoint: ROOT_ENDPOINT)
+    Octokit::Client.new(access_token: GUTHUB_ACCESS_TOKEN)
   end
 end
