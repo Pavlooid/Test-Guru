@@ -67,6 +67,12 @@ en:
     test:
       start: "Start passing test"
 
+  gists:
+    create: 
+      success: "Gist saved succesfully! Link - %{link}"
+      failure: "During saving an error occured!"
+      link: "gist."
+
   test_passages:
     result:
       header: "Test %{title} was completed!"
@@ -80,6 +86,7 @@ en:
       current_question_number: "Current question number: %{current_question_number}"
       current_question: "Current question: %{current_question_question}"
       variants: "Variants of answers:"
+      gist: "Gist"
 
   admin:
     tests:
@@ -107,6 +114,15 @@ en:
         title: "Title"
         question: "Question"
         actions: "Actions"
+
+    gists:
+      index:
+        header: "All created gists:"
+        question: "Question"
+        url: "Gist url"
+        email_of_author: "Author email"
+      gist:
+        gist: "Gist"
 
     questions:
       create:
@@ -184,6 +200,7 @@ en:
     confirm: "Are you sure?"
     welcome: "Welcome, %{first_name}!"
     admin_bar: "Admin panel"
+    gist_bar: "Gists"
     welcome_admin: "Welcome"
     welcome_user: "Welcome, %{user}"
     guru: "Guru"

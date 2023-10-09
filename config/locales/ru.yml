@@ -41,6 +41,12 @@ ru:
     test:
       start: "Начать прохождение теста"
 
+  gists:
+    create: 
+      success: "Гист сохранён успешно! Ссылка - %{link}"
+      failure: "В течении сохранения произошла ошибка!"
+      link: "гист."
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершён!"
@@ -54,6 +60,7 @@ ru:
       current_question_number: "Номер текущего вопроса: %{current_question_number}"
       current_question: "Текущий вопрос: %{current_question_question}"
       variants: "Варианты ответов:"
+      gist: "Гист"
 
   admin:
     tests:
@@ -81,6 +88,15 @@ ru:
         title: "Тема"
         question: "Вопрос"
         actions: "Действия"
+
+    gists:
+      index:
+        header: "Все созданные гисты:"
+        question: "Вопрос"
+        url: "Ссылка на гист"
+        email_of_author: "Почта автора"
+      gist:
+        gist: "Гист"
 
     questions:
       create:
@@ -158,6 +174,7 @@ ru:
     confirm: "Вы уверены?"
     welcome: "Привет, %{first_name}!"
     admin_bar: "Панель администратора"
+    gist_bar: "Гисты"
     welcome_admin: "Добро пожаловать"
     welcome_user: "Добро пожаловать, %{user}"
     guru: "Гуру"
