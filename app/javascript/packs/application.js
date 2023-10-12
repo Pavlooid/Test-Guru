@@ -10,8 +10,8 @@ require("channels")
 require("@popperjs/core")
 
 require("/app/assets/stylesheets/application.scss")
-import '../utilities/sort_by_first_column'
-import '../utilities/sort_title'
+import '../utilities/sort_by_column'
+import '../utilities/passwords_match'
 //= require jquery3
 //= require bootstrap-sprockets
 
