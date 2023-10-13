@@ -1,23 +1,29 @@
 document.addEventListener('turbolinks:load', function() {
-  var control = document.querySelector('#new_user')
+  const control = document.querySelector('#new_user')
 
-  if (control) { control.addEventListener('input', validatePasswords) }
+  if (control) { control.addEventListener('input', new PasswordValidation(control).validatePasswords) }
 })
 
-function validatePasswords() {
-  password = document.getElementById('password');
-  confirmPassword = document.getElementById('password-confirmation');
-  error = document.getElementById('passwords-check');
+class PasswordValidation {
+  
+  constructor() {
+    this.password = document.getElementById('password');
+    this.confirmPassword = document.getElementById('password-confirmation');
+    this.error = document.getElementById('passwords-check');
+  }
 
-  if (!confirmPassword.value) {
-    error.textContent = '';
-  } else if (password.value === confirmPassword.value) {
-    error.classList.add('text-success')
-    error.classList.remove('text-danger')
-    error.textContent = 'Пароли совпадают!'
-  } else if (password.value !== confirmPassword.value) {
-    error.classList.add('text-danger')
-    error.classList.remove('text-success')
-    error.textContent = 'Пароли не совпадают!';
+  validatePasswords = () => {
+
+    if (!this.confirmPassword.value) {
+      this.error.textContent = '';
+    } else if (this.password.value === this.confirmPassword.value) {
+      this.error.classList.add('text-success')
+      this.error.classList.remove('text-danger')
+      this.error.textContent = 'Пароли совпадают!'
+    } else if (this.password.value !== this.confirmPassword.value) {
+      this.error.classList.add('text-danger')
+      this.error.classList.remove('text-success')
+      this.error.textContent = 'Пароли не совпадают!';
+    }
   }
 }
