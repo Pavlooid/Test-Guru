@@ -1,25 +1,23 @@
 document.addEventListener('turbolinks:load', function() {
   var control = document.querySelector('#new_user')
 
-  const password = document.getElementById('password');
-  const confirmPassword = document.getElementById('password-confirmation');
-
-  password.addEventListener('input', () => {
-    validatePasswords();
-  })
-
-  confirmPassword.addEventListener('input', () => {
-    validatePasswords();
-  })
-
-  function validatePasswords() {
-    const passwordValue = password.value;
-    const confirmPasswordValue = confirmPassword.value;
-
-    if (passwordValue !== confirmPasswordValue) {
-      confirmPassword.setCustomValidity('Пароли не совпадают');
-    } else {
-      confirmPassword.setCustomValidity('');
-    }
-  }
+  if (control) { control.addEventListener('input', validatePasswords) }
 })
+
+function validatePasswords() {
+  password = document.getElementById('password');
+  confirmPassword = document.getElementById('password-confirmation');
+  error = document.getElementById('passwords-check');
+
+  if (!confirmPassword.value) {
+    error.textContent = '';
+  } else if (password.value === confirmPassword.value) {
+    error.classList.add('text-success')
+    error.classList.remove('text-danger')
+    error.textContent = 'Пароли совпадают!'
+  } else if (password.value !== confirmPassword.value) {
+    error.classList.add('text-danger')
+    error.classList.remove('text-success')
+    error.textContent = 'Пароли не совпадают!';
+  }
+}
