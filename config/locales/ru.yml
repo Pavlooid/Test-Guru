@@ -64,6 +64,7 @@ ru:
 
   admin:
     tests:
+      success: "Тест обновлён успешно!"
       create:
         success: "Тест создан успешно!"
       update:
@@ -88,6 +89,8 @@ ru:
         title: "Тема"
         question: "Вопрос"
         actions: "Действия"
+      form_inline:
+        submit: 'Ок!'
 
     gists:
       index:

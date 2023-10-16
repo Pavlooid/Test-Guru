@@ -10,8 +10,10 @@ require("channels")
 require("@popperjs/core")
 
 require("/app/assets/stylesheets/application.scss")
+require ("jquery")
 import '../utilities/sort_by_column'
 import '../utilities/passwords_match'
+import '../utilities/form_inline'
 //= require jquery3
 //= require bootstrap-sprockets
 
