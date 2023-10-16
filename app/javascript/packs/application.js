@@ -7,7 +7,11 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require ("@popperjs/core")
+require("@popperjs/core")
+
+require("/app/assets/stylesheets/application.scss")
+import '../utilities/sort_by_column'
+import '../utilities/passwords_match'
 //= require jquery3
 //= require bootstrap-sprockets
 
