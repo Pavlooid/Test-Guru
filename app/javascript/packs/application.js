@@ -14,6 +14,7 @@ require ("jquery")
 import '../utilities/sort_by_column'
 import '../utilities/passwords_match'
 import '../utilities/form_inline'
+import '../utilities/progress_bar'
 //= require jquery3
 //= require bootstrap-sprockets
 

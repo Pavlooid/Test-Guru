@@ -34,6 +34,10 @@ class TestPassage < ApplicationRecord
     percant_of_success >= PERCANT_OF_SUCCESS
   end
 
+  def percent_of_progress
+    current_question_number / all_questions_count.to_f * 100
+  end
+
   private
 
   def before_validation_set_question

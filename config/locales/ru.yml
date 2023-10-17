@@ -55,7 +55,7 @@ ru:
       success: "Успех, результат:"
       fail: "Провал, результат:"
     show:
-      header: "Прохождение теста %{title}"
+      header: "Прохождение теста по теме %{title}"
       all_questions: "Кол-во вопросов: %{all_questions_count}"
       current_question_number: "Номер текущего вопроса: %{current_question_number}"
       current_question: "Текущий вопрос: %{current_question_question}"
