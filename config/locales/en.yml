@@ -90,6 +90,7 @@ en:
 
   admin:
     tests:
+      success: "Test was succesfully updated!"
       create:
         success: "Test was succesfully created!"
       update:
@@ -114,6 +115,8 @@ en:
         title: "Title"
         question: "Question"
         actions: "Actions"
+      form_inline:
+        submit: 'OK!'
 
     gists:
       index:
