@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get :about, to: 'sessions#about'
 
+  resources :feedback, only: %i[create new]
+
   resources :tests, only: :index do
     post :start, on: :member
   end
