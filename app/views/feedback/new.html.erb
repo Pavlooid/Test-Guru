@@ -1,0 +1,16 @@
+<div class='text-center mt-5'>
+  <h2><%= t('.create_feedback') %></h2>
+  <%= form_with url: feedback_index_path, method: :post do |f| %>
+
+  <div class="mt-1">
+    <%= f.text_area :body, rows: 10, class: 'form-control' %>
+  </div>
+
+  <div class="mt-1">
+    <%= f.submit t('.send'), class: "btn btn-primary" %>
+  </div>
+  <% end %>
+  <div class="mt-1">
+    <%= link_to t('general.back'), :back %>
+  </div>
+</div>

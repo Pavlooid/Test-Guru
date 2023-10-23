@@ -173,6 +173,11 @@ en:
     completed_test:
       subject: "You've completed test!"
 
+  feedback:
+    new:
+      create_feedback: "Create a feedback!"
+      send: "Send"
+
   devise:
     registrations:
       new:
@@ -211,3 +216,6 @@ en:
     log_in: "Log in"
     sign_up: "Sign up"
     enter: "Enter"
+    feedback: "Create a feedback"
+    feedback_text: "Feedback"
+    feedback_success: "Feedback created succesfully!"

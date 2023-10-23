@@ -147,6 +147,11 @@ ru:
     completed_test:
       subject: 'Вы успешно завершили тест!'
 
+  feedback:
+    new:
+      create_feedback: "Оставить отзыв!"
+      send: "Отправить"
+
   devise:
     registrations:
       new:
@@ -185,3 +190,6 @@ ru:
     log_in: "Войти в систему"
     sign_up: "Зарегестрироваться"
     enter: "Ввести"
+    feedback: "Оставить отзыв"
+    feedback_text: "Отзыв"
+    feedback_success: "Отзыв создан успешно!"
