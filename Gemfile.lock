@@ -280,7 +280,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   letter_opener
-  listen (~> 3.2)
+  listen
   octicons_helper
   octokit
   pg
