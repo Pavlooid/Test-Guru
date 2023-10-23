@@ -1,0 +1,18 @@
+<h1><%= t('tests.index.header') %></h1>
+<div class="container text-center">
+  <div class="col-md-6">
+    <table class="table align-middle">
+      <tr>
+        <th><%= t('tests.index.id') %></th>
+        <th id='sort-by-column'>
+          <%= t('tests.index.title') %>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success' %>
+        </th>
+        <th><%= t('tests.index.level') %></th>
+        <th><%= t('tests.index.question_count') %></th>
+      </tr>
+      <%= render @tests %>
+    </table>
+  </div>
+</div>

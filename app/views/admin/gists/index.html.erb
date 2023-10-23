@@ -1,0 +1,13 @@
+<h1><%= t('.header') %></h1>
+<div class="container text-center">
+  <div class="col-md-6">
+    <table class="table align-middle">
+      <tr>
+        <th><%= t('.question') %></th>
+        <th><%= t('.url') %></th>
+        <th><%= t('.email_of_author') %></th>
+      </tr>
+      <%= render @gists %>
+    </table>
+  </div>
+</div>

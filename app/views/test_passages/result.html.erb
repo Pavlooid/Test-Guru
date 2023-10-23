@@ -1,0 +1,20 @@
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+
+<h2>
+  <% if @test_passage.success? %>
+    <%= t('.success') %> 
+    <% color = 'green' %>
+  <% else %>
+    <%= t('.fail') %>
+    <% color = 'red' %>
+  <% end %>
+  <% text = "#{@test_passage.percant_of_success}%" %>
+  <%= content_tag(:h2, text, style: "color: #{color}") %>
+</h2>
+
+<p><h3>
+  <%= t('.all_questions', all_questions_count: @test_passage.all_questions_count) %><br>
+  <%= t('.true_questions', correct_questions: @test_passage.correct_questions) %>
+</h3></p>
+
+<%= link_to t('general.tests'), tests_path %>

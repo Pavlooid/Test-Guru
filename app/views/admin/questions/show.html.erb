@@ -1,0 +1,17 @@
+<h1><%= t('.header', title: @question.test.title) %></h1>
+
+<p>
+<%= link_to t('.test_questions'), admin_test_path(@question.test_id) %> |
+<%= link_to t('.edit_question'), edit_admin_question_path(@question) %>
+</p>
+
+<p><strong><%= t('.title') %></strong><%= @question.title %></p> 
+<p><strong><%= t('.question') %></strong><%= @question.question %></p>
+
+<h2><%= t('.answers') %></h2>
+
+<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
