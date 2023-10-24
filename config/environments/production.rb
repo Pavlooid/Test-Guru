@@ -70,14 +70,15 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'test-guru12345.onrender.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    tls:                  true,
-    adress:               'smtp.yandex.ru',
+    adress:               'smtp.gmail.com',
     port:                 587,
-    domain:               'mail.yandex.ru',
+    domain:               'example.com',
     user_name:            ENV['SMTP_USERNAME'],
     password:             ENV['SMTP_PASSWORD'],
     authentication:       'plain',
-    enable_starttls_auto: true
+    enable_starttls:      true,
+    open_timeout:         5,
+    read_timeout:         5
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
