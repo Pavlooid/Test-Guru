@@ -13,7 +13,7 @@ default: &default
   username: pavel
   password: 12345
   port: 5432
-  
+
 development:
   <<: *default
   database: test_guru_development
@@ -28,4 +28,3 @@ test:
 production:
   <<: *default
   database: test_guru_production
-  url: <%= ENV['DATABASE_URL'] %>
