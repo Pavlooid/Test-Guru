@@ -70,14 +70,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'test-guru12345.onrender.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    tls:                  true,
     address:              'smtp.gmail.com',
     port:                 587,
-    domaim:               'gmail.com',
     user_name:            ENV['SMTP_USERNAME'],
     password:             ENV['SMTP_PASSWORD'],
     authentication:       'plain',
-    enable_starttls:      true,
+    enable_starttls_auto: true,
     open_timeout:         5,
     read_timeout:         5
   }
