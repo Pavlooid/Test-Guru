@@ -70,6 +70,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'test-guru12345.onrender.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
+    tls:                  true,
     adress:               'smtp.gmail.com',
     port:                 587,
     domaim:               'gmail.com',
