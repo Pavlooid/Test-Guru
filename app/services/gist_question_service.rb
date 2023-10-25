@@ -38,6 +38,6 @@ class GistQuestionService
   private
 
   def setup_client
-    Octokit::Client.new(access_token: ENV.fetch('GUTHUB_ACCESS_TOKEN'))
+    Octokit::Client.new(access_token: ENV.fetch('GITHUB_ACCESS_TOKEN'))
   end
 end
