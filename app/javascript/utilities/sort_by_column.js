@@ -5,11 +5,11 @@ document.addEventListener('turbolinks:load', function() {
 })
 
 function sortRowsByTitle() {
-  const table = document.querySelector('table')
+  let table = document.querySelector('table')
 
   // NodeList
-  const rows = table.querySelectorAll('tr')
-  const sortedRows = []
+  let rows = table.querySelectorAll('tr')
+  let sortedRows = []
 
   // select all tables rows except header
   for (let i = 1; i < rows.length; i++) {
@@ -26,7 +26,7 @@ function sortRowsByTitle() {
     this.querySelector('.octicon-arrow-up').classList.add('hide')
   }
 
-const sortedTable = document.createElement('table')
+  let sortedTable = document.createElement('table')
 
   sortedTable.classList.add('table')
   sortedTable.appendChild(rows[0])
@@ -39,8 +39,8 @@ const sortedTable = document.createElement('table')
 }
 
 function compareRowsAsc(row1, row2) {
-  const testTitle1 = row1.querySelector('.column').textContent
-  const testTitle2 = row2.querySelector('.column').textContent
+  let testTitle1 = row1.querySelector('.column').textContent
+  let testTitle2 = row2.querySelector('.column').textContent
 
   if (testTitle1 < testTitle2) { return -1}
   if (testTitle1 > testTitle2) { return 1}
@@ -48,8 +48,8 @@ function compareRowsAsc(row1, row2) {
 }
 
 function compareRowsDesc(row1, row2) {
-  const testTitle1 = row1.querySelector('.column').textContent
-  const testTitle2 = row2.querySelector('.column').textContent
+  let testTitle1 = row1.querySelector('.column').textContent
+  let testTitle2 = row2.querySelector('.column').textContent
 
   if (testTitle1 < testTitle2) { return 1}
   if (testTitle1 > testTitle2) { return -1}
