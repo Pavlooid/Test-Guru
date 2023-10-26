@@ -27,8 +27,8 @@ function sortRowsByTitle() {
   }
 
   let sortedTable = document.createElement('table')
-
   sortedTable.classList.add('table')
+  
   let tbody = document.createElement('tbody')
   tbody.appendChild(rows[0])
 
