@@ -98,6 +98,7 @@ en:
       index:
         header: "Available tests:"
         new_test: "Create new test"
+        actions: "Actions"
       edit:
         header: "Edit test %{title}"
       new:

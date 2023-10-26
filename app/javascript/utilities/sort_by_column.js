@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function() {
-  const control = document.getElementById('sort-by-column')
+  let control = document.querySelector('.sort-by-column')
 
   if (control) { control.addEventListener('click', sortRowsByTitle) }
 })
@@ -29,30 +29,32 @@ function sortRowsByTitle() {
   let sortedTable = document.createElement('table')
 
   sortedTable.classList.add('table')
-  sortedTable.appendChild(rows[0])
+  let tbody = document.createElement('tbody')
+  tbody.appendChild(rows[0])
 
   for (let i = 0; i < sortedRows.length; i++) {
-    sortedTable.appendChild(sortedRows[i])
+    tbody.appendChild(sortedRows[i])
   }
 
+  sortedTable.appendChild(tbody)
   table.parentNode.replaceChild(sortedTable, table)
 }
 
 function compareRowsAsc(row1, row2) {
-  let testTitle1 = row1.querySelector('.column').textContent
-  let testTitle2 = row2.querySelector('.column').textContent
+  let testTitle1 = row1.querySelector('td').textContent
+  let testTitle2 = row2.querySelector('td').textContent
 
-  if (testTitle1 < testTitle2) { return -1}
-  if (testTitle1 > testTitle2) { return 1}
+  if (testTitle1 < testTitle2) { return -1 }
+  if (testTitle1 > testTitle2) { return 1 }
   return 0
 }
 
 function compareRowsDesc(row1, row2) {
-  let testTitle1 = row1.querySelector('.column').textContent
-  let testTitle2 = row2.querySelector('.column').textContent
+  let testTitle1 = row1.querySelector('td').textContent
+  let testTitle2 = row2.querySelector('td').textContent
 
-  if (testTitle1 < testTitle2) { return 1}
-  if (testTitle1 > testTitle2) { return -1}
+  if (testTitle1 < testTitle2) { return 1 }
+  if (testTitle1 > testTitle2) { return -1 }
   return 0
 }
 

@@ -72,6 +72,7 @@ ru:
       index:
         header: "Доступные тесты:"
         new_test: "Создать новый тест"
+        actions: "Действия"
       edit:
         header: "Изменить тест %{title}"
       new:
