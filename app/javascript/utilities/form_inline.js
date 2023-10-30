@@ -1,10 +1,11 @@
 document.addEventListener('turbolinks:load', function() {
   
-  $('.form-inline-link').on('click', formInlineLinkHandler);
+  let $formInline = $('.form-inline-link')
+  $formInline.on('click', formInlineLinkHandler);
 
   const errors = document.querySelector('.resource-errors');
  
-  if (errors) {
+  if (errors && $formInline === '') {
     const resourceId = errors.dataset.resourceId;
     formInlineHandler(resourceId);
   }
@@ -25,7 +26,7 @@ function formInlineHandler(testId) {
   $formInline.toggle()
   $testTitle.toggle()
 
-  if (formInline.is(':visiable')) {
+  if ($formInline.is(':visible')) {
     link.textContent = 'Cancel';
   } else {
     link.textContent = 'Edit';
