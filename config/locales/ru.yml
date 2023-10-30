@@ -72,6 +72,7 @@ ru:
       index:
         header: "Доступные тесты:"
         new_test: "Создать новый тест"
+        actions: "Действия"
       edit:
         header: "Изменить тест %{title}"
       new:
@@ -168,6 +169,11 @@ ru:
         email: "Электронная почта"
         password: "Пароль"
         remember_me: "Запомнить"
+    shared:
+      links:
+        forget_pass: "Забыли ваш пароль?"
+        confirm_instructions: "Не получили инструкции по подтверждению почты?"
+        unlock_instructions: "Не получили инструкции по разблокировке?"
 
   general:
     back: "Обратно"

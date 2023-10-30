@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function() {
-  const control = document.querySelector('#new_user')
+  const control = document.getElementById('password_match')
 
   if (control) { control.addEventListener('input', new PasswordValidation(control).validatePasswords) }
 })

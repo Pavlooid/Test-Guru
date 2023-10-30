@@ -98,6 +98,7 @@ en:
       index:
         header: "Available tests:"
         new_test: "Create new test"
+        actions: "Actions"
       edit:
         header: "Edit test %{title}"
       new:
@@ -194,6 +195,11 @@ en:
         email: "Email"
         password: "Password"
         remember_me: "Remember me"
+    shared:
+      links:
+        forget_pass: "Forgot your password?"
+        confirm_instructions: "Didn't receive confirmation instructions?"
+        unlock_instructions: "Didn't receive unlock instructions?"
 
   general:
     back: "Back"
