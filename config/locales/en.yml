@@ -81,6 +81,7 @@ en:
       true_questions: "True answers: %{correct_questions}"
       success: "Success, result: "
       fail: "Fail, result: "
+      time_over: 'Time over!'
     show:
       header: "Passing %{title} test"
       all_questions: "Questions count: %{all_questions_count}"
