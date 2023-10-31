@@ -20,5 +20,10 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p><br>
 
+  <p>
+    <%= form.label :timer %><br>
+    <%= form.number_field :timer%>
+  </p><br>
+
   <p><%= form.submit %></p>
 <% end %>

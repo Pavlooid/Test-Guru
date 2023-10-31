@@ -10,6 +10,7 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_question
 
   def accept!(answer_ids)
+    return if time_over?
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
   end
@@ -19,6 +20,7 @@ class TestPassage < ApplicationRecord
   end
 
   def complete?
+    return true if time_over?
     current_question.nil?
   end
 
@@ -36,6 +38,14 @@ class TestPassage < ApplicationRecord
 
   def percent_of_progress
     current_question_number / all_questions_count.to_f * 100
+  end
+
+  def time_to_finish
+    (created_at + test.timer).iso8601
+  end
+
+  def time_over?
+    created_at + test.timer < Time.now
   end
 
   private

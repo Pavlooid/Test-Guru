@@ -38,6 +38,7 @@ ru:
       level: "Уровень"
       question_count: "Кол-во вопросов"
       start: "Начать Прохождение"
+      timer: "Время на прохождение(в секундах)"
     test:
       start: "Начать прохождение теста"
 
@@ -49,11 +50,12 @@ ru:
 
   test_passages:
     result:
-      header: "Тест %{title} успешно завершён!"
+      header: "Тест %{title} завершён!"
       all_questions: "Всего вопросов: %{all_questions_count}"
       true_questions: "Правильных ответов: %{correct_questions}"
       success: "Успех, результат:"
       fail: "Провал, результат:"
+      time_over: "Время вышло!"
     show:
       header: "Прохождение теста по теме %{title}"
       all_questions: "Кол-во вопросов: %{all_questions_count}"
@@ -84,6 +86,7 @@ ru:
         category: "Категория - "
         level: "Сложность - "
         author: "Автор - "
+        timer: "Время на прохождение(в секундах) - "
         questions: "Вопросы теста:"
         no_questions: "У данного теста нет привязанных вопросов!"
         id: "Номер"

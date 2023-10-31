@@ -6,7 +6,7 @@
 
 <%= render 'shared/errors', resource: @test %>
 
-<table class="table">
+<table class="table text-center align-middle">
   <tr>
     <th class="sort-by-column pointer">
       <%= t('tests.index.title') %>
@@ -15,7 +15,8 @@
     </th>
     <th><%= t('tests.index.level') %></th>
     <th><%= t('tests.index.question_count') %></th>
-    <th colspan="4"><%= t('.actions') %></th>
+    <th><%= t('tests.index.timer') %></th>
+    <th colspan="3"><%= t('.actions') %></th>
   </tr>
 
   <%= render @tests %>
