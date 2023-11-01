@@ -228,3 +228,5 @@ en:
     feedback: "Create a feedback"
     feedback_text: "Feedback"
     feedback_success: "Feedback created succesfully!"
+    badges: "To badges"
+    badges_admin: "Edit badges"

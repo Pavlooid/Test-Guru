@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get :result, on: :member
   end
 
+  resources :badges, only: :index
   resources :gists, only: :create
 
   namespace :admin do
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :badges
     resources :gists, only: :index
   end
 end

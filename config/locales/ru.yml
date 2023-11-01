@@ -202,3 +202,5 @@ ru:
     feedback: "Оставить отзыв"
     feedback_text: "Отзыв"
     feedback_success: "Отзыв создан успешно!"
+    badges: "К достижениям"
+    badges_admin: "Управление достижениями"

@@ -1,0 +1,11 @@
+<table class="table text-center align-middle">
+  <tr>
+    <th><%= t('.name') %></th>
+    <th><%= t('.badge_photo url') %></th>
+    <th><%= t('.rules') %></th>
+  </tr>
+</table>
+
+<%= render @badges %>
+
+<%= link_to t('general.back'), :back %>
