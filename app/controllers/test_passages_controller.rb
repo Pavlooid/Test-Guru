@@ -3,7 +3,9 @@
 class TestPassagesController < ApplicationController
   before_action :find_test_passage, only: %i[show result update]
 
-  def show; end
+  def show
+    set_timer_cookie
+  end
 
   def result; end
 
@@ -21,5 +23,9 @@ class TestPassagesController < ApplicationController
 
   def find_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def set_timer_cookie
+    cookies[:time_to_finish] = @test_passage.time_to_finish
   end
 end

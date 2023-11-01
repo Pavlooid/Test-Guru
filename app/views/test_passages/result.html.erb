@@ -5,6 +5,7 @@
     <%= t('.success') %> 
     <% color = 'green' %>
   <% else %>
+    <%= t('.time_over') if @test_passage.time_over? %><br>
     <%= t('.fail') %>
     <% color = 'red' %>
   <% end %>

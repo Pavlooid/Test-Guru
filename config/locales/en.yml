@@ -64,6 +64,7 @@ en:
       level: "Level"
       question_count: "Question count"
       start: "Start passing"
+      timer: "Time to complete(seconds)"
     test:
       start: "Start passing test"
 
@@ -80,6 +81,7 @@ en:
       true_questions: "True answers: %{correct_questions}"
       success: "Success, result: "
       fail: "Fail, result: "
+      time_over: 'Time over!'
     show:
       header: "Passing %{title} test"
       all_questions: "Questions count: %{all_questions_count}"
@@ -110,6 +112,7 @@ en:
         category: "Category - "
         level: "Level - "
         author: "Author - "
+        timer: "Time to complete(seconds) - "
         questions: "Test questions:"
         no_questions: "Test doesn't have questions!"
         id: "ID"
