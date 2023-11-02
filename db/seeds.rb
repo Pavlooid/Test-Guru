@@ -39,3 +39,8 @@ answer1_t, answer1_f, answer2_t, answer2_f, answer3_t, answer3_f, answer4_t, ans
 { body: 'No', correct: false, question: ruby_question },
 { body: 'Yes', correct: true, question: ruby_usage },
 { body: 'No', correct: false, question: ruby_usage }])
+
+at_first_try, all_tests_of_the_same_level, all_tests_of_similar_category = Rule.create!([
+{ body: 'at first try' },
+{ body: 'all tests of the same level' },
+{ body: 'all tests of similar category' }])

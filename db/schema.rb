@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
     t.boolean "correct", default: true, null: false
-    t.integer "question_id", null: false
+    t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
@@ -27,9 +27,11 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
   create_table "badges", force: :cascade do |t|
     t.string "name"
     t.string "badge_photo_url"
-    t.string "rules"
+    t.string "description"
+    t.bigint "rule_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["rule_id"], name: "index_badges_on_rule_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -39,7 +41,7 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
   end
 
   create_table "gists", force: :cascade do |t|
-    t.integer "question_id", null: false
+    t.bigint "question_id", null: false
     t.string "url"
     t.string "email_of_author"
     t.datetime "created_at", precision: 6, null: false
@@ -50,17 +52,23 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
   create_table "questions", force: :cascade do |t|
     t.string "title", null: false
     t.string "question", null: false
-    t.integer "test_id", null: false
+    t.bigint "test_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
+  create_table "rules", force: :cascade do |t|
+    t.string "body", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "test_passages", force: :cascade do |t|
     t.integer "correct_questions", default: 0
-    t.integer "test_id", null: false
-    t.integer "user_id", null: false
-    t.integer "current_question_id"
+    t.bigint "test_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "current_question_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
@@ -71,8 +79,8 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 0, null: false
-    t.integer "category_id", null: false
-    t.integer "author_id", null: false
+    t.bigint "category_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "timer"
@@ -116,6 +124,7 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "badges", "rules"
   add_foreign_key "gists", "questions"
   add_foreign_key "questions", "tests"
   add_foreign_key "test_passages", "questions", column: "current_question_id"

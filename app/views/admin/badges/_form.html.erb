@@ -1,0 +1,29 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+<%= render 'shared/errors', resource: @test %>
+
+  <p>
+    <%= link_to t('general.back'), :back %>
+  </p>
+
+  <p>
+    <%= form.label :name, t('.name') %><br>
+    <%= form.text_field :name %>
+  </p><br>
+
+  <p>
+    <%= form.label :badge_photo_url %><br>
+    <%= form.text_field :badge_photo_url %>
+  </p><br>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+  </p><br>
+
+  <p>
+    <%= form.label :rule_id %><br>
+    <%= form.collection_select :rule_id, Rule.all, :id, :body, prompt: true %>
+  </p><br>
+
+  <p><%= form.submit %></p>
+<% end %>

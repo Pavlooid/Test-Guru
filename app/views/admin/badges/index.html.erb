@@ -2,10 +2,14 @@
   <tr>
     <th><%= t('.name') %></th>
     <th><%= t('.badge_photo url') %></th>
+    <th><%= t('.description') %></th>
     <th><%= t('.rules') %></th>
+    <th colspan="3"><%= t('.actions') %></th>
   </tr>
+  <%= render @badges %>
 </table>
 
-<%= render @badges %>
-
-<%= link_to t('general.back'), :back %>
+<p>
+<%= link_to t('general.back'), :back %> |
+<%= link_to t('.create_badge'), new_admin_badge_path %>
+</p>
