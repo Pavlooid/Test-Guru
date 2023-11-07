@@ -96,6 +96,37 @@ ru:
       form_inline:
         submit: 'Ок!'
 
+    badges:
+      show: 
+        name: "Достижение - %{name}"
+        photo: "Ссылка на фото - %{photo}"
+        desc: "Описание - %{desc}"
+        rule: "Правило - %{rule}"
+      new:
+        create: "Создать достижение"
+      edit:
+        edit: "Изменить достижение - %{name}"
+      form:
+        name: "Имя"
+        photo: "Ссылка на фото"
+        desc: "Описание"
+        rule: "Правило"
+      index:
+        name: "Имя"
+        badge_photo_url: "Ссылка на фото"
+        description: "Описание"
+        rule: "Правило"
+        create_badge: "Создать достижение"
+        actions: "Действия"
+      badge:
+        to_badge: "К достижению"
+      create:
+        success: "Достижение создано успешно!"
+      update:
+        success: "Достижение обновлено успешно!"
+      destroy:
+        success: "Достижение удалено успешно!"
+
     gists:
       index:
         header: "Все созданные гисты:"

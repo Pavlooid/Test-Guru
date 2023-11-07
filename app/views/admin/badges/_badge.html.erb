@@ -3,7 +3,7 @@
   <td class='align-middle'><%= badge.badge_photo_url %></td>
   <td class='align-middle'><%= badge.description %></td>
   <td class='align-middle'><%= badge.rule.body %></td>
-  <td class='align-middle'><%= link_to t('general.to_badge'), admin_badge_path(badge) %></td>
+  <td class='align-middle'><%= link_to t('.to_badge'), admin_badge_path(badge) %></td>
   <td class='align-middle'><%= link_to t('general.change'), edit_admin_badge_path(badge) %></td>
   <td class='align-middle'>
     <%= link_to t('general.delete'),

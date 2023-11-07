@@ -1,11 +1,15 @@
+<h2 class='text-center align-middle'><%= t('.all_available_badges') %></h2>
 <table class="table text-center align-middle">
   <tr>
     <th><%= t('.name') %></th>
     <th><%= t('.badge_photo url') %></th>
     <th><%= t('.description') %></th>
   </tr>
+  <%= render @badges %>
 </table>
 
-<%= render @badges %>
-
+<h3 class='text-center align-middle'><%= t('.all_user_badges') %></h3>
+<%= current_user.badges.each do |badge| %>
+  <%= puts badge %>
+<% end %><br>
 <%= link_to t('general.tests'), tests_path %>

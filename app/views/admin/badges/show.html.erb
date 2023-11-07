@@ -1,0 +1,12 @@
+<h2><%= t('.name', name: @badge.name) %></h2>
+
+<p>
+  <%= t('.photo', photo: @badge.badge_photo_url) %><br>
+  <%= t('.desc', desc: @badge.description) %><br>
+  <%= t('.rule', rule: @badge.rule.body) %>
+</p>
+
+<p>
+  <%= link_to t('general.edit'), edit_admin_badge_path(@badge) %> |
+  <%= link_to t('general.back'), admin_badges_path %>
+</p>

@@ -1,3 +1,3 @@
 class Rule < ApplicationRecord
-  has_many :badges, dependent: :destroy
+  has_many :badges
 end

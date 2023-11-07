@@ -122,6 +122,37 @@ en:
       form_inline:
         submit: 'OK!'
 
+    badges:
+      show: 
+        name: "Badge - %{name}"
+        photo: "Photo url - %{photo}"
+        desc: "Description - %{desc}"
+        rule: "Rule - %{rule}"
+      new:
+        create: "Create badge"
+      edit:
+        edit: "Edit badge - %{name}"
+      form:
+        name: "Name"
+        photo: "Photo url"
+        desc: "Description"
+        rule: "Rule"
+      index:
+        name: "Name"
+        badge_photo_url: "Photo url"
+        description: "Description"
+        rule: "Rule"
+        create_badge: "Create badge"
+        actions: "Actions"
+      badge:
+        to_badge: "To badge"
+      create:
+        success: "Badge created succesfully!"
+      update:
+        success: "Badge updated succesfully!"
+      destroy:
+        success: "Badge deleted succesfully!"
+
     gists:
       index:
         header: "All created gists:"

@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
     t.string "name"
     t.string "badge_photo_url"
     t.string "description"
-    t.bigint "rule_id"
+    t.bigint "rule_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["rule_id"], name: "index_badges_on_rule_id"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
     t.string "body", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["body"], name: "index_rules_on_body", unique: true
   end
 
   create_table "test_passages", force: :cascade do |t|
@@ -119,6 +120,8 @@ ActiveRecord::Schema.define(version: 2023_11_01_121849) do
   create_table "users_badges", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "badge_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["badge_id"], name: "index_users_badges_on_badge_id"
     t.index ["user_id"], name: "index_users_badges_on_user_id"
   end
