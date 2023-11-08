@@ -74,6 +74,14 @@ en:
       failure: "During saving an error occured!"
       link: "gist."
 
+  badges:
+    index:
+      all_available_badges: "All available badges"
+      name: "Name"
+      badge_photo_url: "Photo url"
+      description: "Description"
+      all_user_badges: "All received badges"
+
   test_passages:
     result:
       header: "Test %{title} was completed!"
@@ -261,3 +269,4 @@ en:
     feedback_success: "Feedback created succesfully!"
     badges: "To badges"
     badges_admin: "Edit badges"
+    give_badge: "Badge has given!"

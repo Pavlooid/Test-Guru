@@ -48,6 +48,14 @@ ru:
       failure: "В течении сохранения произошла ошибка!"
       link: "гист."
 
+  badges:
+    index:
+      all_available_badges: "Все доступные достижения"
+      name: "Название"
+      badge_photo_url: "Ссылка на фото"
+      description: "Описание"
+      all_user_badges: "Все полученные достижения"
+
   test_passages:
     result:
       header: "Тест %{title} завершён!"
@@ -235,3 +243,4 @@ ru:
     feedback_success: "Отзыв создан успешно!"
     badges: "К достижениям"
     badges_admin: "Управление достижениями"
+    give_badge: "Достижение выдано!"

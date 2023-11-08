@@ -18,11 +18,11 @@ pavel, teachbase, thinknetica = User.create!([
 { first_name: 'think', last_name: 'netica', email: 'learn@thinknetica.com', username: 'Thinknetica', password: '123456' }])
 
 star_wars, harry_potter, war_and_piece, ruby, sql = Test.create!([
-{ title: 'Star Wars', level: 3, category: movies, author: pavel },
-{ title: 'Harry Potter', level: 1, category: movies, author: teachbase },
-{ title: 'War and Piece', level: 4, category: books, author: thinknetica },
-{ title: 'Ruby', level: 7, category: languages, author: pavel },
-{ title: 'SQL', level: 0, category: languages, author: teachbase }])
+{ title: 'Star Wars', level: 3, category: movies, author: pavel, timer: 120 },
+{ title: 'Harry Potter', level: 1, category: movies, author: teachbase, timer: 100 },
+{ title: 'War and Piece', level: 4, category: books, author: thinknetica, timer: 600 },
+{ title: 'Ruby', level: 7, category: languages, author: pavel, timer: 300 },
+{ title: 'SQL', level: 0, category: languages, author: teachbase, timer: 1200 }])
 
 star_wars_chapters, war_and_piece_story, ruby_question, ruby_usage = Question.create!([
 { title: 'Star Wars chapters', question: 'How many chapters exist?', test: star_wars },
@@ -40,7 +40,9 @@ answer1_t, answer1_f, answer2_t, answer2_f, answer3_t, answer3_f, answer4_t, ans
 { body: 'Yes', correct: true, question: ruby_usage },
 { body: 'No', correct: false, question: ruby_usage }])
 
-at_first_try, all_tests_of_the_same_level, all_tests_of_similar_category = Rule.create!([
+at_first_try, all_tests_of_level_1, all_tests_of_similar_category, complete_test, short_tests = Rule.create!([
 { body: 'at_first_try' },
-{ body: 'all tests of the same level' },
-{ body: 'all tests of similar category' }])
+{ body: 'all_tests_of_level_1' },
+{ body: 'all_tests_of_similar_category' },
+{ body: 'complete_test'},
+{ body: 'short_tests'}])
