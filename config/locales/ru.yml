@@ -48,6 +48,14 @@ ru:
       failure: "В течении сохранения произошла ошибка!"
       link: "гист."
 
+  badges:
+    index:
+      all_available_badges: "Все доступные достижения"
+      name: "Название"
+      badge_photo_url: "Ссылка на фото"
+      description: "Описание"
+      all_user_badges: "Все полученные достижения"
+
   test_passages:
     result:
       header: "Тест %{title} завершён!"
@@ -95,6 +103,37 @@ ru:
         actions: "Действия"
       form_inline:
         submit: 'Ок!'
+
+    badges:
+      show: 
+        name: "Достижение - %{name}"
+        photo: "Ссылка на фото - %{photo}"
+        desc: "Описание - %{desc}"
+        rule: "Правило - %{rule}"
+      new:
+        create: "Создать достижение"
+      edit:
+        edit: "Изменить достижение - %{name}"
+      form:
+        name: "Имя"
+        photo: "Ссылка на фото"
+        desc: "Описание"
+        rule: "Правило"
+      index:
+        name: "Имя"
+        badge_photo_url: "Ссылка на фото"
+        description: "Описание"
+        rule: "Правило"
+        create_badge: "Создать достижение"
+        actions: "Действия"
+      badge:
+        to_badge: "К достижению"
+      create:
+        success: "Достижение создано успешно!"
+      update:
+        success: "Достижение обновлено успешно!"
+      destroy:
+        success: "Достижение удалено успешно!"
 
     gists:
       index:
@@ -202,3 +241,6 @@ ru:
     feedback: "Оставить отзыв"
     feedback_text: "Отзыв"
     feedback_success: "Отзыв создан успешно!"
+    badges: "К достижениям"
+    badges_admin: "Управление достижениями"
+    give_badge: "Достижение выдано!"

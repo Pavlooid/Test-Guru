@@ -6,10 +6,10 @@
       <%= t('general.welcome_user', user: current_user.email) %> |
       <% if current_user.is_a?(Admin) %>
       <%= link_to t('general.admin_bar'), admin_tests_path %> |
-      <%= link_to t('general.gist_bar'), admin_gists_path %> |
       <% else %>
       <%= link_to t('general.feedback'), new_feedback_path %> |
       <% end %>
+      <%= link_to t('general.badges'), badges_path %> |
       <%= link_to t('general.exit'), destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to t('general.log_in'), new_session_path(resource_name) %> |

@@ -15,7 +15,7 @@ class Admin::AnswersController < Admin::BaseController
   def create
     @answer = @question.answers.new(answer_params)
     if @answer.save
-      redirect_to [:admin, @answer], notice: t('.success')
+      redirect_to [:admin, @answer], notice: t('general.success')
     else
       render :new
     end

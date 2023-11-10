@@ -16,6 +16,8 @@ class User < ApplicationRecord
            foreign_key: 'author_id',
            dependent: :destroy,
            inverse_of: :author
+  has_many :users_badges, dependent: :destroy
+  has_many :badges, through: :users_badges, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true,
             format: { 
